@@ -1,1 +1,68 @@
 
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Meu Primeiro Site</title>
+
+<style>
+body{
+    margin:0;
+    font-family:Arial, sans-serif;
+    background:#111;
+    color:white;
+    text-align:center;
+}
+
+header{
+    background:#0077ff;
+    padding:20px;
+}
+
+section{
+    padding:50px 20px;
+}
+
+button{
+    background:#0077ff;
+    color:white;
+    border:none;
+    padding:15px 25px;
+    border-radius:8px;
+    cursor:pointer;
+    font-size:18px;
+}
+
+button:hover{
+    background:#0055cc;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>Bem-vindo ao meu site</h1>
+</header>
+
+<section>
+    <h2>Meu primeiro projeto</h2>
+    <p>Este site foi criado gratuitamente usando GitHub Pages.</p>
+
+    <button onclick="mostrarMensagem()">
+        Clique Aqui
+    </button>
+
+    <p id="resultado"></p>
+</section>
+
+<script>
+function mostrarMensagem(){
+    document.getElementById("resultado").innerHTML =
+    "Parabéns! Seu site está funcionando.";
+}
+</script>
+
+</body>
+</html>
