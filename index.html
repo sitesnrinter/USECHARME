@@ -1,11 +1,18 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Use Charme</title>
+
+<style>
 body{
     margin:0;
-    font-family: 'Georgia', serif;
+    font-family: Georgia, serif;
     background:#f7f4ef;
     color:#232F63;
 }
 
-/* topo */
 header{
     background:#232F63;
     color:#E8E0D5;
@@ -13,22 +20,12 @@ header{
     padding:50px 20px;
 }
 
-.logo{
-    width:180px;
-    height:180px;
-    border-radius:50%;
-    object-fit:cover;
-    margin-bottom:20px;
-}
-
 header h1{
     margin:0;
     font-size:42px;
-    font-weight:normal;
 }
 
 header p{
-    opacity:.9;
     margin-top:10px;
 }
 
@@ -43,7 +40,6 @@ header p{
     font-weight:bold;
 }
 
-/* catálogo */
 .container{
     max-width:1200px;
     margin:auto;
@@ -58,11 +54,6 @@ header p{
     border-radius:20px;
     overflow:hidden;
     box-shadow:0 10px 25px rgba(0,0,0,.08);
-    transition:.3s;
-}
-
-.card:hover{
-    transform:translateY(-5px);
 }
 
 .card img{
@@ -88,12 +79,7 @@ button{
     border:none;
     background:#232F63;
     color:white;
-    font-size:16px;
     cursor:pointer;
-}
-
-button:hover{
-    background:#182149;
 }
 
 footer{
@@ -102,3 +88,43 @@ footer{
     text-align:center;
     padding:25px;
 }
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>Use Charme</h1>
+    <p>Elegância, conforto e estilo.</p>
+
+    <a class="insta"
+       href="https://www.instagram.com/_usecharme_/"
+       target="_blank">
+       Ver Instagram
+    </a>
+</header>
+
+<div class="container">
+
+    <div class="card">
+        <img src="https://images.unsplash.com/photo-1518611012118-696072aa579a?w=800">
+        <h3>Legging Premium</h3>
+        <p class="price">R$ 99,90</p>
+        <button>Comprar</button>
+    </div>
+
+    <div class="card">
+        <img src="https://images.unsplash.com/photo-1514996937319-344454492b37?w=800">
+        <h3>Conjunto Fitness</h3>
+        <p class="price">R$ 129,90</p>
+        <button>Comprar</button>
+    </div>
+
+</div>
+
+<footer>
+    © 2026 Use Charme
+</footer>
+
+</body>
+</html>
