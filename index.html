@@ -3,19 +3,18 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Loja Feminina</title>
+<title>Use Charme | Moda Fitness</title>
 
 <style>
 body{
     margin:0;
     font-family: Arial, sans-serif;
-    background:#f5f5f5;
-    color:#333;
+    background:#fff;
 }
 
 /* topo */
 header{
-    background: linear-gradient(135deg,#ff4da6,#ff1a75);
+    background: linear-gradient(135deg,#ff2e93,#ff6bb5);
     color:white;
     text-align:center;
     padding:40px 20px;
@@ -23,7 +22,25 @@ header{
 
 header h1{
     margin:0;
-    font-size:36px;
+    font-size:40px;
+    letter-spacing:1px;
+}
+
+header p{
+    margin-top:10px;
+    opacity:0.9;
+}
+
+/* botão insta */
+.insta{
+    margin-top:15px;
+    display:inline-block;
+    background:white;
+    color:#ff2e93;
+    padding:10px 20px;
+    border-radius:20px;
+    text-decoration:none;
+    font-weight:bold;
 }
 
 /* catálogo */
@@ -34,36 +51,40 @@ header h1{
     padding:20px;
 }
 
-/* card produto */
+/* produto */
 .card{
+    border:1px solid #eee;
+    border-radius:15px;
+    overflow:hidden;
     background:white;
-    border-radius:12px;
-    padding:10px;
-    text-align:center;
-    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+    box-shadow:0 5px 15px rgba(0,0,0,0.05);
 }
 
 .card img{
     width:100%;
-    border-radius:10px;
+    height:250px;
+    object-fit:cover;
+}
+
+.card h3{
+    margin:10px;
 }
 
 .price{
-    color:#ff1a75;
+    color:#ff2e93;
     font-weight:bold;
-    margin:10px 0;
+    margin:0 10px 10px;
 }
 
-/* botão */
+/* botão whatsapp */
 button{
+    width:100%;
+    padding:12px;
+    border:none;
     background:#25D366;
     color:white;
-    border:none;
-    padding:10px;
-    border-radius:8px;
-    cursor:pointer;
-    width:100%;
     font-size:16px;
+    cursor:pointer;
 }
 
 button:hover{
@@ -83,51 +104,48 @@ footer{
 <body>
 
 <header>
-    <h1>💖 Loja Feminina Bella Moda</h1>
-    <p>Catálogo online - peças lindas para você</p>
+    <h1>💖 Use Charme</h1>
+    <p>Moda fitness feminina que valoriza você</p>
+
+    <a class="insta" href="https://www.instagram.com/_usecharme_/" target="_blank">
+        📲 Ver Instagram
+    </a>
 </header>
 
 <div class="container">
 
     <div class="card">
-        <img src="https://images.unsplash.com/photo-1520975958225-7f61a6a8d1f5" />
-        <h3>Vestido Floral</h3>
-        <p class="price">R$ 89,90</p>
-        <button onclick="comprar('Vestido Floral')">Comprar no WhatsApp</button>
+        <img src="https://images.unsplash.com/photo-1514996937319-344454492b37" />
+        <h3>Conjunto Fitness Pink</h3>
+        <p class="price">R$ 129,90</p>
+        <button onclick="buy('Conjunto Fitness Pink')">Comprar no WhatsApp</button>
     </div>
 
     <div class="card">
-        <img src="https://images.unsplash.com/photo-1520975682031-a0e9a4d5f5a3" />
-        <h3>Conjunto Moda Praia</h3>
-        <p class="price">R$ 119,90</p>
-        <button onclick="comprar('Conjunto Moda Praia')">Comprar no WhatsApp</button>
+        <img src="https://images.unsplash.com/photo-1518611012118-696072aa579a" />
+        <h3>Legging Modeladora</h3>
+        <p class="price">R$ 99,90</p>
+        <button onclick="buy('Legging Modeladora')">Comprar no WhatsApp</button>
     </div>
 
     <div class="card">
-        <img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f" />
-        <h3>Blusa Elegante</h3>
+        <img src="https://images.unsplash.com/photo-1520975918310-3c5f3f3f4d4f" />
+        <h3>Top Fitness Premium</h3>
         <p class="price">R$ 59,90</p>
-        <button onclick="comprar('Blusa Elegante')">Comprar no WhatsApp</button>
-    </div>
-
-    <div class="card">
-        <img src="https://images.unsplash.com/photo-1520975928311-9f9c0a9f4d1c" />
-        <h3>Vestido Festa</h3>
-        <p class="price">R$ 149,90</p>
-        <button onclick="comprar('Vestido Festa')">Comprar no WhatsApp</button>
+        <button onclick="buy('Top Fitness Premium')">Comprar no WhatsApp</button>
     </div>
 
 </div>
 
 <footer>
-    © 2026 - Loja Feminina Bella Moda
+    © 2026 Use Charme - Moda Fitness
 </footer>
 
 <script>
-function comprar(produto){
-    let numero = "5599999999999"; // troque pelo seu WhatsApp
-    let msg = "Olá! Tenho interesse no produto: " + produto;
-    let url = "https://wa.me/" + numero + "?text=" + encodeURIComponent(msg);
+function buy(product){
+    let number = "55SEUNUMEROAQUI";
+    let msg = "Olá! Quero comprar: " + product;
+    let url = "https://wa.me/" + number + "?text=" + encodeURIComponent(msg);
     window.open(url, "_blank");
 }
 </script>
