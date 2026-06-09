@@ -3,50 +3,79 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Meu Site</title>
+<title>Loja Feminina</title>
 
 <style>
-body {
-    margin: 0;
+body{
+    margin:0;
     font-family: Arial, sans-serif;
-    background: linear-gradient(135deg, #000, #1a1a1a);
-    color: white;
-    text-align: center;
+    background:#f5f5f5;
+    color:#333;
 }
 
-header {
-    padding: 60px 20px;
-    background: #0077ff;
+/* topo */
+header{
+    background: linear-gradient(135deg,#ff4da6,#ff1a75);
+    color:white;
+    text-align:center;
+    padding:40px 20px;
 }
 
-header h1 {
-    margin: 0;
-    font-size: 40px;
+header h1{
+    margin:0;
+    font-size:36px;
 }
 
-p {
-    font-size: 18px;
-    opacity: 0.8;
+/* catálogo */
+.container{
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap:20px;
+    padding:20px;
 }
 
-button {
-    margin-top: 20px;
-    padding: 15px 25px;
-    border: none;
-    border-radius: 10px;
-    font-size: 18px;
-    cursor: pointer;
-    background: #00ff88;
-    color: black;
-    transition: 0.3s;
+/* card produto */
+.card{
+    background:white;
+    border-radius:12px;
+    padding:10px;
+    text-align:center;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
 }
 
-button:hover {
-    transform: scale(1.1);
+.card img{
+    width:100%;
+    border-radius:10px;
 }
 
-section {
-    padding: 50px 20px;
+.price{
+    color:#ff1a75;
+    font-weight:bold;
+    margin:10px 0;
+}
+
+/* botão */
+button{
+    background:#25D366;
+    color:white;
+    border:none;
+    padding:10px;
+    border-radius:8px;
+    cursor:pointer;
+    width:100%;
+    font-size:16px;
+}
+
+button:hover{
+    background:#1ebe5d;
+}
+
+/* rodapé */
+footer{
+    text-align:center;
+    padding:20px;
+    font-size:14px;
+    color:#777;
 }
 </style>
 </head>
@@ -54,20 +83,52 @@ section {
 <body>
 
 <header>
-    <h1>🚀 Meu Primeiro Site</h1>
-    <p>Feito grátis com GitHub Pages</p>
-
-    <button onclick="msg()">Clique aqui</button>
+    <h1>💖 Loja Feminina Bella Moda</h1>
+    <p>Catálogo online - peças lindas para você</p>
 </header>
 
-<section>
-    <h2>Sobre mim</h2>
-    <p>Esse site foi criado do zero e está online agora.</p>
-</section>
+<div class="container">
+
+    <div class="card">
+        <img src="https://images.unsplash.com/photo-1520975958225-7f61a6a8d1f5" />
+        <h3>Vestido Floral</h3>
+        <p class="price">R$ 89,90</p>
+        <button onclick="comprar('Vestido Floral')">Comprar no WhatsApp</button>
+    </div>
+
+    <div class="card">
+        <img src="https://images.unsplash.com/photo-1520975682031-a0e9a4d5f5a3" />
+        <h3>Conjunto Moda Praia</h3>
+        <p class="price">R$ 119,90</p>
+        <button onclick="comprar('Conjunto Moda Praia')">Comprar no WhatsApp</button>
+    </div>
+
+    <div class="card">
+        <img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f" />
+        <h3>Blusa Elegante</h3>
+        <p class="price">R$ 59,90</p>
+        <button onclick="comprar('Blusa Elegante')">Comprar no WhatsApp</button>
+    </div>
+
+    <div class="card">
+        <img src="https://images.unsplash.com/photo-1520975928311-9f9c0a9f4d1c" />
+        <h3>Vestido Festa</h3>
+        <p class="price">R$ 149,90</p>
+        <button onclick="comprar('Vestido Festa')">Comprar no WhatsApp</button>
+    </div>
+
+</div>
+
+<footer>
+    © 2026 - Loja Feminina Bella Moda
+</footer>
 
 <script>
-function msg(){
-    alert("🔥 Seu site está funcionando!");
+function comprar(produto){
+    let numero = "5599999999999"; // troque pelo seu WhatsApp
+    let msg = "Olá! Tenho interesse no produto: " + produto;
+    let url = "https://wa.me/" + numero + "?text=" + encodeURIComponent(msg);
+    window.open(url, "_blank");
 }
 </script>
 
