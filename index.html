@@ -4,38 +4,79 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Meu Primeiro Site</title>
+<title>Loja Feminina</title>
 
 <style>
 body{
     margin:0;
-    font-family:Arial, sans-serif;
-    background:#111;
-    color:white;
-    text-align:center;
+    font-family: Arial, sans-serif;
+    background:#f5f5f5;
+    color:#333;
 }
 
+/* topo */
 header{
-    background:#0077ff;
+    background: linear-gradient(135deg,#ff4da6,#ff1a75);
+    color:white;
+    text-align:center;
+    padding:40px 20px;
+}
+
+header h1{
+    margin:0;
+    font-size:36px;
+}
+
+/* catálogo */
+.container{
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap:20px;
     padding:20px;
 }
 
-section{
-    padding:50px 20px;
+/* card produto */
+.card{
+    background:white;
+    border-radius:12px;
+    padding:10px;
+    text-align:center;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
 }
 
+.card img{
+    width:100%;
+    border-radius:10px;
+}
+
+.price{
+    color:#ff1a75;
+    font-weight:bold;
+    margin:10px 0;
+}
+
+/* botão */
 button{
-    background:#0077ff;
+    background:#25D366;
     color:white;
     border:none;
-    padding:15px 25px;
+    padding:10px;
     border-radius:8px;
     cursor:pointer;
-    font-size:18px;
+    width:100%;
+    font-size:16px;
 }
 
 button:hover{
-    background:#0055cc;
+    background:#1ebe5d;
+}
+
+/* rodapé */
+footer{
+    text-align:center;
+    padding:20px;
+    font-size:14px;
+    color:#777;
 }
 </style>
 </head>
@@ -43,24 +84,52 @@ button:hover{
 <body>
 
 <header>
-    <h1>Bem-vindo ao meu site</h1>
+    <h1>💖 Loja Feminina Bella Moda</h1>
+    <p>Catálogo online - peças lindas para você</p>
 </header>
 
-<section>
-    <h2>Meu primeiro projeto</h2>
-    <p>Este site foi criado gratuitamente usando GitHub Pages.</p>
+<div class="container">
 
-    <button onclick="mostrarMensagem()">
-        Clique Aqui
-    </button>
+    <div class="card">
+        <img src="https://images.unsplash.com/photo-1520975958225-7f61a6a8d1f5" />
+        <h3>Vestido Floral</h3>
+        <p class="price">R$ 89,90</p>
+        <button onclick="comprar('Vestido Floral')">Comprar no WhatsApp</button>
+    </div>
 
-    <p id="resultado"></p>
-</section>
+    <div class="card">
+        <img src="https://images.unsplash.com/photo-1520975682031-a0e9a4d5f5a3" />
+        <h3>Conjunto Moda Praia</h3>
+        <p class="price">R$ 119,90</p>
+        <button onclick="comprar('Conjunto Moda Praia')">Comprar no WhatsApp</button>
+    </div>
+
+    <div class="card">
+        <img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f" />
+        <h3>Blusa Elegante</h3>
+        <p class="price">R$ 59,90</p>
+        <button onclick="comprar('Blusa Elegante')">Comprar no WhatsApp</button>
+    </div>
+
+    <div class="card">
+        <img src="https://images.unsplash.com/photo-1520975928311-9f9c0a9f4d1c" />
+        <h3>Vestido Festa</h3>
+        <p class="price">R$ 149,90</p>
+        <button onclick="comprar('Vestido Festa')">Comprar no WhatsApp</button>
+    </div>
+
+</div>
+
+<footer>
+    © 2026 - Loja Feminina Bella Moda
+</footer>
 
 <script>
-function mostrarMensagem(){
-    document.getElementById("resultado").innerHTML =
-    "Parabéns! Seu site está funcionando.";
+function comprar(produto){
+    let numero = "5599999999999"; // troque pelo seu WhatsApp
+    let msg = "Olá! Tenho interesse no produto: " + produto;
+    let url = "https://wa.me/" + numero + "?text=" + encodeURIComponent(msg);
+    window.open(url, "_blank");
 }
 </script>
 
