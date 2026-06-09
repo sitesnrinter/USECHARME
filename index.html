@@ -5,138 +5,149 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Use Charme</title>
 
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+
 <style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
 body{
-    margin:0;
-    font-family:Georgia, serif;
-    background:#f7f4ef;
-    color:#232F63;
-}
-
-header{
-    background:#232F63;
-    color:#E8E0D5;
-    text-align:center;
-    padding:60px 20px;
-}
-
-header h1{
-    margin:0;
-    font-size:50px;
-}
-
-header p{
-    font-size:18px;
-}
-
-.insta{
-    display:inline-block;
-    margin-top:20px;
-    padding:12px 25px;
-    background:#E8E0D5;
-    color:#232F63;
-    text-decoration:none;
-    border-radius:30px;
-    font-weight:bold;
+background:#232F63;
+font-family:'Montserrat',sans-serif;
+color:#E8E0D5;
+min-height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+padding:20px;
 }
 
 .container{
-    max-width:1200px;
-    margin:auto;
-    padding:40px 20px;
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:25px;
+width:100%;
+max-width:500px;
+text-align:center;
 }
 
-.card{
-    background:white;
-    border-radius:20px;
-    overflow:hidden;
-    box-shadow:0 5px 20px rgba(0,0,0,0.1);
+.logo{
+width:180px;
+height:180px;
+border-radius:50%;
+object-fit:cover;
+margin-bottom:30px;
+border:2px solid rgba(255,255,255,.15);
 }
 
-.card img{
-    width:100%;
-    height:320px;
-    object-fit:cover;
+.nome{
+font-size:48px;
+font-weight:300;
+letter-spacing:8px;
+margin-bottom:10px;
 }
 
-.card h3{
-    margin:15px;
+.sub{
+font-size:14px;
+letter-spacing:6px;
+opacity:.8;
+margin-bottom:40px;
 }
 
-.price{
-    margin:0 15px 15px;
-    font-size:22px;
-    font-weight:bold;
-    color:#232F63;
+.divisor{
+width:120px;
+height:1px;
+background:rgba(255,255,255,.25);
+margin:25px auto;
 }
 
-.card button{
-    width:100%;
-    border:none;
-    padding:15px;
-    background:#232F63;
-    color:white;
-    cursor:pointer;
-    font-size:16px;
+.frases{
+font-size:28px;
+line-height:1.8;
+letter-spacing:4px;
+margin-bottom:35px;
 }
 
-.card button:hover{
-    background:#182149;
+.botao{
+display:flex;
+align-items:center;
+justify-content:center;
+text-decoration:none;
+width:100%;
+padding:22px;
+margin-bottom:18px;
+border-radius:14px;
+font-size:18px;
+letter-spacing:2px;
+transition:.3s;
 }
 
-footer{
-    background:#232F63;
-    color:#E8E0D5;
-    text-align:center;
-    padding:25px;
+.principal{
+background:#E8E0D5;
+color:#232F63;
+font-weight:600;
 }
+
+.secundario{
+border:1px solid rgba(255,255,255,.4);
+color:#E8E0D5;
+}
+
+.botao:hover{
+transform:scale(1.02);
+}
+
+.rodape{
+margin-top:30px;
+font-size:12px;
+letter-spacing:5px;
+opacity:.7;
+}
+
 </style>
-
 </head>
+
 <body>
-
-<header>
-    <h1>Use Charme</h1>
-    <p>Elegância, conforto e estilo para você</p>
-
-    <a class="insta"
-       href="https://www.instagram.com/_usecharme_/"
-       target="_blank">
-       Ver Instagram
-    </a>
-</header>
 
 <div class="container">
 
-    <div class="card">
-        <img src="https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=800&q=80">
-        <h3>Legging Premium</h3>
-        <p class="price">R$ 99,90</p>
-        <button>Comprar</button>
-    </div>
+<img src="logo.png" class="logo">
 
-    <div class="card">
-        <img src="https://images.unsplash.com/photo-1514996937319-344454492b37?auto=format&fit=crop&w=800&q=80">
-        <h3>Conjunto Fitness</h3>
-        <p class="price">R$ 129,90</p>
-        <button>Comprar</button>
-    </div>
+<h1 class="nome">USE CHARME</h1>
 
-    <div class="card">
-        <img src="https://images.unsplash.com/photo-1506629905607-d9d31e4f2d6b?auto=format&fit=crop&w=800&q=80">
-        <h3>Top Fitness</h3>
-        <p class="price">R$ 59,90</p>
-        <button>Comprar</button>
-    </div>
+<p class="sub">MODA FEMININA PREMIUM</p>
 
+<div class="divisor"></div>
+
+<div class="frases">
+ELEGÂNCIA<br>
+CHARME<br>
+IDENTIDADE
 </div>
 
-<footer>
-    © 2026 Use Charme - Todos os direitos reservados
-</footer>
+<div class="divisor"></div>
+
+<a class="botao principal"
+href="https://wa.me/5500000000000">
+📲 COMPRAR PELO WHATSAPP
+</a>
+
+<a class="botao secundario"
+href="catalogo.html">
+🛍️ EXPLORAR CATÁLOGO
+</a>
+
+<a class="botao secundario"
+href="https://www.instagram.com/_usecharme_/">
+📸 INSTAGRAM
+</a>
+
+<div class="rodape">
+USE CHARME | MODA FEMININA
+</div>
+
+</div>
 
 </body>
 </html>
